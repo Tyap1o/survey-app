@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>アンケートサイト</title>
+</head>
+<body>
+    <div class="container">
+        <h1>アンケート</h1>
+        <form id="surveyForm">
+            <div class="form-group">
+                <label for="name">お名前:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">メールアドレス:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="satisfaction">当サイトにはどの程度満足していますか？</label>
+                <select id="satisfaction" name="satisfaction" required>
+                    <option value="">選択してください</option>
+                    <option value="very-satisfied">非常に満足</option>
+                    <option value="satisfied">満足</option>
+                    <option value="neutral">どちらでもない</option>
+                    <option value="unsatisfied">不満</option>
+                    <option value="very-unsatisfied">非常に不満</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comment">ご意見・ご感想:</label>
+                <textarea id="comment" name="comment" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn">送信</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <div class="results-container">
+        <h2>回答結果</h2>
+        <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
